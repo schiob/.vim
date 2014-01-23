@@ -35,6 +35,18 @@ noremap <Leader>e :quit<CR>  " Quit current window
 noremap <Leader>E :qa!<CR>   " Quit all windows
 
 
+" Code Folding for python
+" type 'za' to open and close a fold
+set foldmethod=indent
+set foldlevel=99
+
+
+" Window splits
+" Vertical Split: Ctrl+w + v
+" Horizontal Split: Ctrl+w + s
+" Close current windows: Ctrl+w + q
+
+
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
 " Every unnecessary keystroke that can be saved is good for your health :)
 map <c-j> <c-w>j
@@ -134,7 +146,6 @@ map <F2> :NERDTreeToggle<CR>
 autocmd vimenter * if !argc() | NERDTree | endif " open a NERD-tree if no file specified
 
 
-
-" Settings for Pep8
-" git submodule add https://github.com/vim-scripts/pep8.git bundle/pep8
-let g:pep8_map='<leader>8'
+" Settings for vim-flake8
+" git clone https://github.com/nvie/vim-flake8
+autocmd BufWritePost *.py call Flake8()
