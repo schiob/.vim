@@ -149,3 +149,15 @@ autocmd vimenter * if !argc() | NERDTree | endif " open a NERD-tree if no file s
 " Settings for vim-flake8
 " git clone https://github.com/nvie/vim-flake8
 autocmd BufWritePost *.py call Flake8()
+
+
+" ============================================================================
+" Java IDE Setup
+" ============================================================================
+
+" Set nocompatible as a requierement for eclim
+" filetype plugin indent on THIS is set before
+set nocompatible
+
+
+
